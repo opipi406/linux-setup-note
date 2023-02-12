@@ -1,0 +1,20 @@
+[core]
+  excludesfile = ~/.gitignore_global
+[user]
+  name = 
+  email = 
+[alias]
+  s = status
+  b = branch
+  co = checkout
+  sw = switch
+  c = commit
+  cm = commit -m
+  l = log --graph --oneline --decorate
+  pullr = pull --rebase
+  ff = flow feature
+  fh = flow hotfix
+  fr = flow release
+
+[init]
+  defaultBranch = main
