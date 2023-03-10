@@ -8,6 +8,10 @@ fi
 # User specific environment and startup programs
 source $HOME/.git-completion.bash
 source $HOME/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true      # *:unstaged, +:staged
+GIT_PS1_SHOWUNTRACKEDFILES=true  # %:untracked
+GIT_PS1_SHOWSTASHSTATE=true      # $:stashed
+GIT_PS1_SHOWUPSTREAM=auto        # >:ahead, <:behind
 export PS1='\h \[\033[01;33m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\e[m\] \$ '
 
 PATH=$PATH:$HOME/bin:$HOME/usr/local/bin
