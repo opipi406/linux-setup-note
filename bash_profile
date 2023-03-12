@@ -15,6 +15,7 @@ GIT_PS1_SHOWUPSTREAM=auto        # >:ahead, <:behind
 export PS1='\h \[\033[01;33m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\e[m\] \$ '
 
 # Setting path
-PATH=$PATH:$HOME/usr/local/bin
-PATH=$PATH:$HOME/bin
+#PATH=$HOME/.nodebrew/current/bin:$PATH
+PATH=$HOME/local/bin:$PATH
+PATH=$HOME/bin:$PATH
 export PATH
