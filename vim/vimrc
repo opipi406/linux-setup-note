@@ -92,7 +92,7 @@ set nrformats=
 " 行をまたいで移動
 "set whichwrap=b,s,h,l,<,>,[,],~
 " マウス操作を有効化
-set mouse=a
+"set mouse=a
 
 " auto reload .vimrc
 augroup source-vimrc
