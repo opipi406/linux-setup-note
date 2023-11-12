@@ -1,6 +1,8 @@
-# エックスサーバー環境構築メモ
+# XServer 環境構築メモ
 
-# 最新版Git（2.x）のインストール
+- [XServerでpython & pipを使う](./python.md)
+
+## 最新版Git（2.x）のインストール
 
 [XserverでGitの最新版を使う](https://itexplorer.hateblo.jp/entry/20170624-use-latest-git-on-xserver)
 
@@ -20,7 +22,7 @@ make -i install
 rm -rf ~/git-2.x.tar.gz ~/git-2.x
 ```
 
-# Note
+## リンク
 
 [Xserverに自前の認証キーでSSH接続する方法](https://hiro8blog.com/connect-to-xserver-by-ssh/)  
 

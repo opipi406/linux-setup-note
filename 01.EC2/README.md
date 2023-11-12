@@ -1,4 +1,6 @@
-# yumの初期セットアップ
+# AWS EC2 環境構築メモ
+
+## yumの初期セットアップ
 ```bash
 sudo yum -y update
 ```
