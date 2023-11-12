@@ -28,9 +28,9 @@ export PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig
 
 ### opensslのインストール
 ```bash
-wget https://www.openssl.org/source/openssl-1.1.1g.tar.gz
-tar -zxf openssl-1.1.1g.tar.gz
-cd openssl-1.1.1g
+wget https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+tar -zxf openssl-1.1.1l.tar.gz
+cd openssl-1.1.1l
 ./config --openssldir=$HOME/local/openssl
 make
 make install
@@ -52,7 +52,13 @@ source /.bash_profile
 wget https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tgz
 tar -zxf Python-3.10.6.tgz
 cd Python-3.10.6
-./configure --prefix=$HOME/local/python/ --with-system-ffi LDFLAGS="-L $HOME/local/lib64/" CPPFLAGS="-I $HOME/local/include/" --with-openssl=/usr/bin/openssl/ --with-openssl-rpath=auto
+./configure \
+--enable-optimizations \
+--prefix=$HOME/local/python/ \
+--with-system-ffi LDFLAGS="-L $HOME/local/lib64/" CPPFLAGS="-I $HOME/local/include/" \
+--with-openssl=$HOME/local/openssl/ \
+--with-openssl-rpath=auto
+
 make
 make install
 ```
