@@ -1,0 +1,22 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+# locale settings (for warp terminal)
+LANG="ja_JP.utf-8"
+LC_ALL="ja_JP.utf-8"
+LC_CTYPE="ja_JP.utf-8"
+
+# ffi settings
+# export LD_LIBRARY_PATH=$HOME/local/lib64
+# export PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig
+
+# openssl settings
+# export PATH=$HOME/local/openssl/bin:$PATH
+# export LD_LIBRARY_PATH=$HOME/local/openssl/lib:$LD_LIBRARY_PATH
+
+#
+export PUB=$HOME/hogehoge.com/public_html/

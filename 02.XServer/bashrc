@@ -2,24 +2,26 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
+    . /etc/bashrc
 fi
+
+# User specific aliases and functions
 
 # Aliases
 alias la='ls -a'
 alias lla='ls -la'
 alias cls='clear'
 alias duu='du -hd 1 | sort -hr'
-alias git-fresh='git branch --merged | grep -v "\*|develop|main|master"|xargs git branch -d'
-alias pub='cd ~/unico-unique.com/public_html/'
+alias git-fresh='git branch --merged main | grep -v "\*|develop|main|master"|xargs git branch -d'
 
 # User specific environment and startup programs
 source $HOME/.git-completion.bash
 source $HOME/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true      # *:unstaged, +:staged
-
 export PS1='\h \[\033[01;33m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\e[m\] \$ '
-# export PS1='[\u@\h \W]\033[01;31m\]$(__git_ps1 " (%s)")\[\e[m\] \$ '
+
+# Python3.10.6
+export PATH=$HOME/local/python/bin:$PATH
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/local/bin:$PATH
