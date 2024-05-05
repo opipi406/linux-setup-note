@@ -39,7 +39,7 @@ function display_help {
     echo "vim setup script"
     echo
     echo "${YELLOW}Usage:${NC}" >&2
-    echo "  bash setup.sh"
+    echo "  bash deploy.sh"
     exit
 }
 
@@ -51,7 +51,15 @@ fi
 
 ###################################################################################################
 
-if [ ! -e $HOME/.vimrc ]; then
-    cp ./vimrc $HOME/.vimrc
-    echo "[INFO] vimrcを $HOME/.vimrc にコピーしました"
+if [ ! -e "$HOME"/.vimrc ]; then
+    echo -n "${WATER}?${NC} vimrcをセットアップしますか？ ${GRAY}[y/N]${NC} "
+    read -r ANSWER
+    if [ "$ANSWER" = "y" ]; then
+        cp ./vimrc.template "$HOME"/.vimrc
+
+        echo "${WATER}[INFO]${NC} vimrcをセットアップしました"
+        echo "${GRAY}-> $HOME/.vimrc${NC}"
+    fi
+else
+    echo "${WATER}[INFO]${NC} vimrc セットアップ済"
 fi
