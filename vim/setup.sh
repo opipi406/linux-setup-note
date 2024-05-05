@@ -63,3 +63,5 @@ if [ ! -e "$HOME"/.vimrc ]; then
 else
     echo "${WATER}[INFO]${NC} vimrc セットアップ済"
 fi
+
+echo

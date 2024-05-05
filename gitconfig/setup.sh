@@ -64,6 +64,8 @@ else
     echo "${WATER}[INFO]${NC} gitconfig セットアップ済"
 fi
 
+echo
+
 if [ ! -e "$HOME"/.gitignore_global ]; then
     echo -n "${WATER}?${NC} gitignore_globalをセットアップしますか？ ${GRAY}[y/N]${NC} "
     read -r ANSWER
@@ -76,3 +78,5 @@ if [ ! -e "$HOME"/.gitignore_global ]; then
 else
     echo "${WATER}[INFO]${NC} gitignore_global セットアップ済"
 fi
+
+echo

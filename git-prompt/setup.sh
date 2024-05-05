@@ -65,6 +65,7 @@ chmod a+x "$HOME"/.git-completion.bash
 
 echo "${WATER}[INFO]${NC} git-completion.bashのダウンロードが完了しました"
 echo "${GRAY}-> $HOME/.git-completion.bash${NC}"
+echo
 
 # install git-prompt.bash
 echo "${WATER}[INFO]${NC} git-prompt.bashのダウンロードを実行します"
@@ -74,3 +75,4 @@ chmod a+x "$HOME"/.git-prompt.sh
 
 echo "${WATER}[INFO]${NC} git-prompt.bashのダウンロードが完了しました"
 echo "${GRAY}-> $HOME/.git-prompt.sh${NC}"
+echo
