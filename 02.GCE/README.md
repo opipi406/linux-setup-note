@@ -5,6 +5,12 @@
 sudo apt-get -y update
 ```
 
+## タイムゾーンの設定
+```bash
+timedatectl set-timezone Asia/Tokyo
+date
+```
+
 ## gitのインストール
 ```bash
 sudo apt-get -y install git
@@ -21,9 +27,8 @@ sudo service docker start
 ```bash
 sudo gpasswd -a $(whoami) docker
 ```
-### docker.sock にグループでの書き込み権限を付与
 ```bash
-sudo chgrp docker /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 ```
 
 ## docker-composeのインストール
@@ -32,3 +37,4 @@ sudo mkdir -p /usr/local/lib/docker/cli-plugins
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 ```
+
