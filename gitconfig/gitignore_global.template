@@ -1,0 +1,6 @@
+*~
+.DS_Store
+.env
+__docs*/
+NOTE.md
+_NOTE.md
